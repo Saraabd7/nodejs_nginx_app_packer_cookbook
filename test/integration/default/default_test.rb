@@ -27,10 +27,10 @@ describe package('nodejs') do
   its('version') {should cmp > '8.11.2*'}
 end
 
-# describe npm('pm2') do
-#   it {should be_installed}
-# end
-#
-# describe npm('react') do
-#   it { should be_installed}
-# end
+describe npm('pm2') do
+  it {should be_installed}
+end
+
+describe npm('react') do
+  it { should be_installed}
+end

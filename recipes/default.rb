@@ -10,9 +10,10 @@ apt_update 'update_sources' do
 end
 include_recipe 'nodejs'
 package 'nginx'
+# package 'npm'
 # include_recipe'nodejs'
-nodejs_npm 'pm2'
-nodejs_npm 'react'
+npm_package 'pm2'
+npm_package 'react'
 
 service 'nginx' do
  action [:enable, :start]
