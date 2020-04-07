@@ -10,6 +10,8 @@ To use it import it in your own Cookbook and run it in the recipes.
 - Chef, Inspec, ChefSpec
 -  Importing Cookbooks( will require our search )
 - Attributes and templates.
+- TDD
+- ERB
 ##  Installation::
 
 
@@ -26,3 +28,11 @@ To run integration test:
 ```
 kitchen test
 ```
+## ERB and ice cream cones <%= %> and <% %>
+- ERB tags ::
+ERB is embed ruby.
+Meaning you can interpolate variable or run ruby code.
+It can then be converted to a string.
+ERB  is like the f'this is python {hello} but for entire document.
+#### <%= %> allow ruby with no output 
+#### <%= %> allows ruby with output ( I mean like printing documents ).
