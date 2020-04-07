@@ -12,8 +12,8 @@ include_recipe 'nodejs'
 package 'nginx'
 # package 'npm'
 # include_recipe'nodejs'
-npm_package 'pm2'
-npm_package 'react'
+nodejs_npm 'pm2'
+nodejs_npm 'react'
 
 service 'nginx' do
  action [:enable, :start]
@@ -21,6 +21,7 @@ end
 # creating template in machine
 template "/etc/nginx/sites-available/proxy.conf" do
   source'proxy.conf.erb'
+  variables proxy_port: node['nginx']['proxy_port']
   notifies :restart, 'service[nginx]'
 end
 # Making symbolic link to above template
